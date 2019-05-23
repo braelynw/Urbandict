@@ -3,7 +3,7 @@ $(document).ready(function(){
 
         var word = $("#word").val();
         $.ajax({
-            url: "http://api.urbandictionary.com/v0/define?term=" + word,
+            url: "https://api.urbandictionary.com/v0/define?term=" + word,
             dataType: "jsonp",
             success: showDef
 
@@ -35,7 +35,7 @@ $(document).ready(function(){
 
         for (var i=0; i<3; i++){
 
-        $("#yours").append("Definition: " + json.list[i].definition + "<br>");
+        $("#yours").append("Definition: " + json.list[i].definition + "<br><br>");
         $("#yours").append("Example: " + json.list[i].example + "<br>");
 
 
